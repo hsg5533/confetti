@@ -1,0 +1,133 @@
+/* Reset and general styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: url("./../img/A_festive_birthday-themed_background_with_vibrant_.webp")
+    no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Main container for the content */
+.container {
+  background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+  border-radius: 20px;
+  padding: 50px;
+  width: 80%;
+  max-width: 700px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Header */
+h1 {
+  font-size: 4rem;
+  color: #ff6347; /* Tomato red color */
+  margin-bottom: 20px;
+  letter-spacing: 2px;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.4);
+  animation: textSlideIn 1.5s ease-out;
+}
+
+/* Paragraph */
+p {
+  font-size: 1.5rem;
+  color: #555;
+  margin-bottom: 40px;
+  animation: textFadeIn 2s ease-in-out;
+}
+
+/* Button */
+button {
+  background-color: #ff6347; /* Tomato red */
+  color: white;
+  font-size: 1.2rem;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #e55347;
+  transform: scale(1.1);
+}
+
+button:focus {
+  outline: none;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes textSlideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes textFadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 3rem; /* Adjust header size for tablets */
+  }
+  p {
+    font-size: 1.2rem; /* Adjust paragraph size */
+  }
+  button {
+    font-size: 1rem; /* Adjust button font size */
+    padding: 12px 30px; /* Adjust button padding */
+  }
+  .container {
+    padding: 40px; /* Adjust container padding */
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 2.5rem; /* Smaller header size for mobile */
+  }
+  p {
+    font-size: 1rem; /* Smaller paragraph size */
+  }
+  button {
+    font-size: 0.9rem; /* Smaller button font size */
+    padding: 10px 25px; /* Smaller button padding */
+  }
+  .container {
+    padding: 30px; /* Compact container padding */
+    width: 90%; /* Use more of the screen width on mobile */
+  }
+}
